@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "type": "kotlin",
+          "request": "launch",
+          "name": "Kotlin Launch",
+          "projectRoot": "${workspaceFolder}/app",
+          // mainClassは格納場所に合わせて変更する
+          // 例）以下は、「app/src/main/kotlin/com/sample/hsgw」の場合
+          "mainClass": "atcoder_kotlin/AppKt",
+          "preLaunchTask": "build"
+      }
+  ]
+}
