@@ -3,15 +3,25 @@
  */
 package atcoder_kotlin
 
-class App {
-    val greeting: String
-        get() {
-            return "Hello World!"
-        }
-}
+fun main(){
+    var (n, w) = readLine()!!.split(" ").map { it.toInt() }
+    val list = List(n) {readLine()!!.split(" ").map { it.toLong() }}.sortedByDescending { it[0] }
 
-fun main() {
-    println(App().greeting)
-    val list = listOf(1, 2, 3, 4, 5)
-    list.map{it * 2}.forEach{println(it)}
+    var deli = 0L
+    for (cheeze in list){
+        val d = cheeze[0]
+        var g = cheeze[1]
+        while (g > 0){
+            if(w==0){
+                break
+            }
+            deli+=d
+            g--
+            w--
+        }
+        if(w==0){
+            break
+        }
+    }
+    println(deli) 
 }

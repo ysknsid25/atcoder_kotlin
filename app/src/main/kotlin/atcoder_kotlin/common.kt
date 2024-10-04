@@ -42,6 +42,7 @@ fun readFloatList(): List<Float> = readLine()!!.split(" ").map { it.toFloat() }
 fun readMultipleLinesStrings(n: Int): List<List<String>> =
     List(n) { readLine()!!.split(" ") }
 
+
 // 複数行の整数列を受け取る場合
 fun readMultipleLinesInts(n: Int): List<List<Int>> =
     List(n) { readLine()!!.split(" ").map { it.toInt() } }
