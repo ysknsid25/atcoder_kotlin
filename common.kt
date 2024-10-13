@@ -362,4 +362,15 @@ class Common{
         }
         return res
     }
+
+    // 約数の列挙
+    fun findDivisors(number: Int): List<Int> {
+        val divisors = mutableListOf<Int>()
+        for (i in 1..number) {
+            if (number % i == 0) {
+                divisors.add(i)
+            }
+        }
+        return divisors
+    }
 }
