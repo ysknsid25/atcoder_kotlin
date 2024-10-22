@@ -26,7 +26,7 @@ jobs:
         files=$(git diff --name-only --diff-filter=A ${{ github.event.before }} ${{ github.sha }}  | grep -E '^[0-9]+-[A-G]')
         if [ -n "$files" ]; then
           echo "Found file(s): $files"
-          curl -X POST -F content="$files" "<change your hooks url>" &> /dev/null
+          curl -X POST -F content="$files" "https://discord.com/api/webhooks/1298304723845386340/2j0AxFpZ-YPGHN6SqdvnvTZ6_Pyl7uztY07YwAd_mm843ubIFJpJC9HhODLYy8e8rNUo" &> /dev/null
         else
           echo "No matching files found."
           exit 0
